@@ -6,7 +6,7 @@ const plantSchema = new Schema({
   family: String,
   light: String,
   climate: String,
-  maitenance: String,
+  maintenance: String,
   comments: [{reviewer: String, content: String}],
   image: String
 });

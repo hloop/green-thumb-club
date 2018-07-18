@@ -16,7 +16,6 @@ router.get('/plants', (req, res, next) => {
 });
 
 // // Finish
-
 router.get('/plants/create', (req, res, next) => {
   res.render('addPlant')
 });

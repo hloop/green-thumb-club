@@ -1,0 +1,27 @@
+<h2>{{thePlant.species}}</h2>
+<h2>Edit this Plant</h2>
+
+
+<form action="/plants/{{thePlant._id}}/update" method="post">
+
+<label>Species</label>
+<input type="text" name="species" value="{{thePlant.species}}">
+<br>
+
+<label>Family</label>
+<input type="text" name="family" value="{{thePlant.family}}">
+<br>
+
+<label>Light</label>
+<input type="text" name="light" value="{{thePlant.light}}">
+<br>
+
+<label>Maintenance</label>
+<input type="text" name="maintenance" value="{{thePlant.maintenance}}">
+<br>
+
+
+<button type="submit">Save Plant</button>
+
+
+</form>
