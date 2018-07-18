@@ -16,7 +16,7 @@ const session      = require('express-session');
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/green-thumb-club', {useMongoClient: true})
+  .connect(process.env.MONGODB_URI, {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
