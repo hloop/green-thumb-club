@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Plant    = require('../models/plant');
 
 const dbName = 'green-thumb-club';
-mongoose.connect(`mongodb://localhost/${dbName}`);
+// mongoose.connect(`mongodb://localhost/${dbName}`);
+mongoose.connect(process.env.MONGODB_URI);
 
 const plants = [
   {
