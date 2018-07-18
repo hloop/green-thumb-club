@@ -10,3 +10,25 @@
 <br>
 <span>{{plant.image}}</span>
 
+<a href="/plants/{{thePlant._id}}/edit">Edit This Plant</a>
+
+
+<form action="/plants/{{thePlant._id}}/delete" method="post">
+<button>Delete This Plant</button>
+</form>
+
+<a href="/plants/{{thePlant._id}}/comments/create">Add a Comment For This Plant</a>
+
+<div>
+  <h2>Comments For This Plant</h2>
+  <hr>
+  {{#each thePlant.comments}}
+    <h4>{{this.reviewer}}</h4>
+    <p>{{this.content}}</p>
+    <div>{{@index}}</div>
+    <form action="/plants/{{../thePlant._id}}/comments/delete/{{@index}}" method="post">
+      <button>Delete This Comment</button>
+    </form>
+    <hr>
+  {{/each}}
+</div>

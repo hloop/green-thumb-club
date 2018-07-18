@@ -1,7 +1,7 @@
 <h2>Add a new plant to the database</h2>
 
 
-<form action="/plants/create" method="post">
+<form action="/plants/create" method="post" enctype="multipart/form-data">
 
 <label>Species</label>
 <input type="text" name="species">
@@ -20,7 +20,13 @@
 <input type="text" name="maintenance"> 
 {{!-- Include full name? --}}
 <br>
+
+<label>Image</label>
+<input type="file" name="photo">
+<br>
+
 <button type="submit">Save Plant</button>
+
 
 
 </form>

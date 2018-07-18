@@ -1,8 +1,11 @@
 const express = require('express');
 const router  = express.Router();
+// const multer = require('multer');
 const Plant   = require('../models/plant');
 const Comment = require('../models/comment');
 // const ensureLogin  = require('connect-ensure-login');
+
+const uploadCloud = require('../config/cloudinary');
 
 /////////////////////ensureLogin.ensureLoggedIn(),
 router.get('/plants', (req, res, next) => {
@@ -20,14 +23,14 @@ router.get('/plants/create', (req, res, next) => {
   res.render('addPlant')
 });
 
-router.post('/plants/create', (req, res, next)=>{
+router.post('/plants/create', uploadCloud.single('photo'), (req, res, next)=>{
    const newPlant = new Plant ({
     species: req.body.species,
     family: req.body.family,
     light: req.body.light,
     climate: req.body.climate,
     maitenance: req.body.maitenance,
-    //put req.body.image here
+    image: req.file.url
    })
 
    newPlant.save()
