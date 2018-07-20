@@ -35,7 +35,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Express View engine setup
-
 app.use(require('node-sass-middleware')({
   src:  path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
@@ -105,6 +104,9 @@ app.use('/', plantRoutes);
 
 const commentRoutes = require('./routes/commentRoutes');
 app.use('/', commentRoutes);
+
+const searchRoutes = require('./routes/searchRoutes');
+app.use('/', searchRoutes);
 
 
 module.exports = app;

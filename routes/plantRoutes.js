@@ -29,8 +29,8 @@ router.post('/plants/create', uploadCloud.single('photo'), (req, res, next)=>{
     family: req.body.family,
     light: req.body.light,
     climate: req.body.climate,
-    maitenance: req.body.maitenance,
-    image: req.file.url
+    maintenance: req.body.maintenance,
+    // image: req.file.url
    })
 
    newPlant.save()
@@ -60,7 +60,7 @@ router.post('/plants/:id/update', (req, res, next)=>{
       family: req.body.family,
       light: req.body.light,
       climate: req.body.climate,
-      maitenance: req.body.maitenance,
+      maintenance: req.body.maintenance,
     })
     .then((thePlant)=>{
         res.redirect('/plants/'+thePlant._id)

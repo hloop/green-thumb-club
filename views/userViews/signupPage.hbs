@@ -1,21 +1,30 @@
-<h1>Signup</h1>
+<div class="enterSiteBackground">
+<div class="enterSiteLayout">
+  <h1>Signup</h1>
+    <br>
+      <form action="/signup" method="post">
+      <fieldset>
+        <div>
+          <label for="username exampleInputEmail1">Username:</label>
+          <input id="username exampleInputEmail1" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter username" name="theUsername">
+          <small id="emailHelp" class="form-text text-muted">Don't worry, we'll never share your email with anyone else.</small>
+        </div>
+      <br>
+        <div>
+          <label for="password exampleInputPassword1">Password:</label>
+          <input type="password" class="form-control" id="password exampleInputPassword1" placeholder="Enter password" name="thePassword">
+        </div>
+      <br>
+        <div>
+          <button class="btn btn-primary btn-sm">Submit</button>
+        </div>
+      </fieldset>
+      </form>
+    <br>
+    {{#if errorMessage}}
+    <div>{{errorMessage}}</div>
+    {{/if}}
+</div>
+</div>
 
-<form action="/signup" method="post">
 
-    <label for="username">Username</label>
-    <input id="username" type="text" name="theUsername">
-
-    <label for="password">password</label>
-    <input id="password" name="thePassword" type="password">
-
-
-
-    <button>Submit</button>
-
-
-
-</form>
-
-{{#if errorMessage}}
-<div>{{errorMessage}}</div>
-{{/if}}

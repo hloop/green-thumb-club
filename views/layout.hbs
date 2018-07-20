@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'>
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-ZCyhLHmqgPJ/qW/xn+zQu7JrywSUOgV7SkjrnkGDss+6/qs+4SPDrS6qq4IOG0N9" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -15,24 +15,37 @@
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
-      {{!-- <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li> --}}
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/plants">Plant's Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Your Plants</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="/login">Log In</a>
       </li>
       <p class="nav-link">/</p>
+      {{!-- <li class="nav-item">
+        <a class="nav-link" href="/logout">Log Out</a>
+      </li>
+      <p class="nav-link">/</p> --}}
       <li class="nav-item">
         <a class="nav-link" href="/signup">Sign Up</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <form class="form-inline my-2 my-lg-0" action ="/search/plants">
+      <input class="form-control mr-sm-2"  type="text" placeholder="Search" name="searchInput">
       <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
-
+  
     {{{body}}}
 
     <script src='/javascripts/script.js'></script>

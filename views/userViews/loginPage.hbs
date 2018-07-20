@@ -1,20 +1,28 @@
-<h1>Login</h1>
-
-
-<form action="/login" method="POST">
-  <div>
-    <label for="username">Username:</label>
-    <input type="text" name="theUsername">
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" name="thePassword">
-  </div>
-  <div>
-    <input type="submit" value="Log In">
-  </div>
-</form>
-
-{{#if errorMessage }}
-    <div>{{ errorMessage }}</div>
-{{/if}}
+<div class="enterSiteBackground">
+<div class="enterSiteLayout">
+  <h1>Welcome back!</h1>
+    <br>
+      <form action="/login" method="POST">
+      <fieldset>
+        <div>
+          <label for="username exampleInputEmail1">Username:</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" name="theUsername">
+          <small id="emailHelp" class="form-text text-muted">Don't worry, we'll never share your email with anyone else.</small>
+        </div>
+      <br>
+        <div>
+          <label for="password exampleInputPassword1">Password:</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" name="thePassword">
+        </div>
+      <br>
+        <div>
+          <input type="submit" value="Log In" class="btn btn-primary btn-sm">
+        </div>
+    </fieldset>
+    </form>
+   <br>
+  {{#if errorMessage }}
+  <div>{{ errorMessage }}</div>
+  {{/if}}
+</div>
+</div>

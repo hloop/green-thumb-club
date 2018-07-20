@@ -1,34 +1,25 @@
 const mongoose = require('mongoose');
 const Plant    = require('../models/plant');
 
-const dbName = 'green-thumb-club';
-// mongoose.connect(`mongodb://localhost/${dbName}`);
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect('mongodb://localhost/green-thumb-club');
+
+// mongoose.connect(process.env.MONGODB_URI);
 
 const plants = [
-  {
-    species : 'Vanda aliceae',
-    family: 'Orchidaceae',
-    light: 'Bright light',
-    climate: 'Tropical',
-    maintenance: 'Level 5',
-    image: '../images/vanda-aliceae.jpg',
-  },
   {
     species : 'Asplenium nidus',
     family: 'Aspleniaceae',
     light: 'Partial to full shade',
     climate: 'Tropical',
-    maintenance: 'Level 1',
+    maintenance: 'Low',
     image: '../images/asplenium-nidus.jpg',
-
   },
   {
     species : 'Polytrichum juniperinum',
     family: 'Polytrichaceae',
     light: 'Bright light to full shade',
-    climate: 'arctic, boreal, cool temperate, cool semiarid, and cool mesothermal',
-    maintenance: 'Level 1',
+    climate: 'Boreal, temperate, semiarid, and mesothermal',
+    maintenance: 'Low',
     image: '../images/polytrichum-juniperinum.jpg',
   },
   {
@@ -36,7 +27,7 @@ const plants = [
     family: 'Arecaceae',
     light: 'Bright light',
     climate: 'Tropical',
-    maintenance: 'Level 3',
+    maintenance: 'Medium',
     image: '../images/ravenea-rivularis.jpg',
   },
   {
@@ -44,7 +35,7 @@ const plants = [
     family: 'Asparagaceae',
     light: 'Bright light',
     climate: 'Tropical',
-    maintenance: 'Level 3',
+    maintenance: 'Medium',
     image: '../images/cordyline-fruticosa.jpg',
   },
   {
@@ -52,7 +43,7 @@ const plants = [
     family: 'Cactaceae',
     light: 'Direct sunlight',
     climate: 'Arid',
-    maintenance: 'Level 1',
+    maintenance: 'Low',
     image: '../images/echinopsis-pachanoi.jpg',
   },
   {
@@ -60,7 +51,7 @@ const plants = [
     family: 'Cactaceae',
     light: 'Direct sunlight',
     climate: 'Arid',
-    maintenance: 'Level 1',
+    maintenance: 'Low',
     image: '../images/opuntia-microdasys.jpg',
   },
   {
@@ -68,7 +59,7 @@ const plants = [
     family: 'Araceae',
     light: 'Partial to full shade',
     climate: 'Tropical',
-    maintenance: 'Level 2',
+    maintenance: 'Low',
     image: '../images/philodendron-hederaceum.jpg',
   },
   {
@@ -76,32 +67,64 @@ const plants = [
     family: 'Araceae',
     light: 'Bright light',
     climate: 'Tropical',
-    maintenance: 'Level 3',
+    maintenance: 'Medium',
     image: '../images/monstera-deliciosa.jpeg',
   },
   {
     species : 'Crassula ovata',
     family: 'Crassulaceae',
     light: 'Direct sunlight',
-    climate: 'Cool semiarid and cool mesothermal',
-    maintenance: 'Level 1',
+    climate: 'Semiarid and mesothermal',
+    maintenance: 'Low',
     image: '../images/crassula-ovata.jpg',
+  },
+  {
+    species : 'Euphorbia lactea',
+    family: 'Euphorbiaceae',
+    light: 'Direct sunlight',
+    climate: 'Arid',
+    maintenance: 'Low',
+    image: '../images/euphorbia-lactea.jpg'
   },
   {
     species : 'Ficus lyrata',
     family: 'Moraceae',
     light: 'Bright light',
     climate: 'Tropical',
-    maintenance: 'Level 3',
+    maintenance: 'Medium',
     image: '../images/ficus-lyrata.png'
+  },
+  {
+    species : 'Vanda aliceae',
+    family: 'Orchidaceae',
+    light: 'Bright light',
+    climate: 'Tropical',
+    maintenance: 'High',
+    image: '../images/vanda-aliceae.jpg',
   },
   {
     species : 'Aloe vera',
     family: 'Asphodelaceae',
     light: 'Direct sunlight',
     climate: 'Arid, tropical, and mesothermal',
-    maintenance: 'Level 1',
+    maintenance: 'Low',
     image: '../images/aloe-vera.jpg'
+  },
+  {
+    species : 'Saintpaulia',
+    family: 'Gesneriaceae',
+    light: 'Direct sunlight',
+    climate: 'Tropical',
+    maintenance: 'Low',
+    image: '../images/saintpaulia.jpg'
+  },
+  {
+    species : 'Sathiphyllum',
+    family: 'Araceae',
+    light: 'Partial to full shade',
+    climate: 'Topical',
+    maintenance: 'Medium',
+    image: '../images/spathiphyllum.jpg'
   },
 ]
 

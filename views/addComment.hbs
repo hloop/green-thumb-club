@@ -1,11 +1,20 @@
-<form action="/plants/{{plant._id}}/comments/create" method="post">
+<div class="enterSiteBackground">
+<div class="enterSiteLayout">
+  <h2>Thanks for sharing your experience!</h2>
+    <br>
+    <form action="/plants/{{plant._id}}/comments/create" method="post">
+      <label for="reviewer">Leave your name: </label>
+      <input class="form-control" type="text" id="reviewer exampleTextarea" name="reviewer">
+    <br>
+      <div class="form-group">
+      <label>Comment: </label>
+      <textarea class="form-blah" name="content" rows="3"></textarea>
+    <br>
+      <button class="btn btn-primary btn-sm" type="submit">Post it</button>
+      </div>
+    </form>
+</div>
+</div>
 
-    <label for="reviewer">Who Are You?</label>
-    <input type="text" id="reviewer" name="reviewer">
 
-    <label>What's your experience with this plant?</label>
-    <textarea name="content" cols="30" rows="10"></textarea>
 
-    <button type="submit">Post</button>
-
-</form>

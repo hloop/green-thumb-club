@@ -1,12 +1,36 @@
-<h1>Plant's Page</h1>
+<section class="plantsHeader">
+  <div class="jumbotron">
+    <h1 class="display-4">Find Your Perfect Plant</h1>
+      <h3 class="lead">See what other {{this.title}} members are growing</h3>
+    <hr class="my-z">
+      <br>
+    <div class="plants_Buttons">
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Your Plants</a>
+        </p>
+      <div class="plants_Buttons2">
+        <p class="lead">
+          <a class="btn btn-secondary btn-lg" href="/plants/create" role="button">Add a Plant</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<div class="container-fluid">
+<div class="row plants_layout">
 {{#each plantsArray}}
-<div class="card mb-3">
+<div class="card mb-3 col-sm-2 displayPlants">
   <h3 class="card-header">{{this.species}}</h3>
     <img style="height: 200px; width: 100%; display: block;" src="{{this.image}}" alt="Plant image">
-  <div class="card-footer text-muted">
-    <a href="/plants/{{this._id}}" class="card-link">See details</a>
-    <a href="/plants/{{plant._id}}/comments/create" class="card-link">Leave a review</a>
+  <div id="plantCards" class="card-footer text-muted">
+    {{!-- <a href="/plants/{{this._id}}" class="card-link">See details</a>
+    <a href="/plants/{{plant._id}}/comments/create" class="card-link">Leave a review</a> --}}
+    <hr>
+    <a class="btn btn-info" href="/plants/{{this._id}}" role="button">See details</a>
   </div>
 </div>
+
 {{/each}}
+</div>
+</div>

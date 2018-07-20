@@ -7,8 +7,8 @@ commentRouter.get('/plants/:id/comments/new', (req, res, next)=>{
   .then((thePlant)=>{
       res.render('addComment', {plant: thePlant})
   })
-  .catch((daError)=>{
-      next(daError)
+  .catch((err)=>{
+      next(err)
    })
 });
 
@@ -34,7 +34,6 @@ commentRouter.post('/plants/:id/comments/delete/:commentIndex', (req, res, next)
   Plant.findById(plantID)
   .then((thePlantThatImEditing)=>{
       thePlantThatImEditing.comments.splice(commentIndex, 1);
-      // check nick's "reviewRoutes.js" for another way to delete comments
       thePlantThatImEditing.save()
           .then((x)=>{
               res.redirect('/plants/' + plantID)

@@ -1,23 +1,23 @@
-<h2>{{thePlant.species}}</h2>
+<h2>{{plant.species}}</h2>
 <h2>Edit this Plant</h2>
 
 
-<form action="/plants/{{thePlant._id}}/update" method="post">
+<form action="/plants/{{plant._id}}/update" method="post">
 
 <label>Species</label>
-<input type="text" name="species" value="{{thePlant.species}}">
+<input type="text" name="species" value="{{plant.species}}">
 <br>
 
 <label>Family</label>
-<input type="text" name="family" value="{{thePlant.family}}">
+<input type="text" name="family" value="{{plant.family}}">
 <br>
 
 <label>Light</label>
-<input type="text" name="light" value="{{thePlant.light}}">
+<input type="text" name="light" value="{{plant.light}}">
 <br>
 
 <label>Maintenance</label>
-<input type="text" name="maintenance" value="{{thePlant.maintenance}}">
+<input type="text" name="maintenance" value="{{plant.maintenance}}">
 <br>
 
 

@@ -1,32 +1,27 @@
-<h2>Add a new plant to the database</h2>
-
-
-<form action="/plants/create" method="post" enctype="multipart/form-data">
-
-<label>Species</label>
-<input type="text" name="species">
-<br>
-
-
-<label>Family</label>
-<input type="text" name="family">
-<br>
-
-<label>Light</label>
-<input type="text" name="title">
-<br>
-
-<label>Maintenance</label>
-<input type="text" name="maintenance"> 
-{{!-- Include full name? --}}
-<br>
-
-<label>Image</label>
-<input type="file" name="photo">
-<br>
-
-<button type="submit">Save Plant</button>
-
-
-
-</form>
+<div class="enterSiteBackground">
+<div class="enterSiteLayout">
+  <h2>Add a new plant to our database</h2>
+    <br>
+    <form action="/plants/create" method="post" enctype="multipart/form-data">
+      <label>Species</label>
+      <input type="text" class="form-control" id="exampleTextarea" name="species">
+    <br>
+      <label>Family</label>
+      <input type="text" class="form-control" id="exampleTextarea" name="family">
+    <br>
+      <label>Light</label>
+      <input type="text" class="form-control" id="exampleTextarea" name="title">
+    <br>
+      <label>Maintenance</label>
+      <input type="text" class="form-control" id="exampleTextarea" name="maintenance"> 
+  {{!-- Include full name? --}}
+    <br>
+      <label>Image</label>
+    <br>
+      <input type="file" name="photo">
+    <br>
+    <br>
+      <button class="btn btn-primary btn-sm" type="submit">Save Plant</button>
+    </form>
+</div>
+</div>
