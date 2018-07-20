@@ -1,27 +1,24 @@
-<h2>{{plant.species}}</h2>
-<h2>Edit this Plant</h2>
-
-
-<form action="/plants/{{plant._id}}/update" method="post">
-
-<label>Species</label>
-<input type="text" name="species" value="{{plant.species}}">
-<br>
-
-<label>Family</label>
-<input type="text" name="family" value="{{plant.family}}">
-<br>
-
-<label>Light</label>
-<input type="text" name="light" value="{{plant.light}}">
-<br>
-
-<label>Maintenance</label>
-<input type="text" name="maintenance" value="{{plant.maintenance}}">
-<br>
-
-
-<button type="submit">Save Plant</button>
-
-
-</form>
+<div class="enterSiteBackground">
+<div class="enterSiteLayout">
+  <h2>Edit {{plant.species}}</h2>
+    <br>
+    <form action="/plants/{{plant._id}}/update" method="post">
+      <label>Species</label>
+      <input class="form-control" type="text" name="species" id="exampleTextarea" value="{{plant.species}}">
+    <br>
+      <label>Family</label>
+      <input class="form-control" type="text" name="family" id="exampleTextarea" value="{{plant.family}}">
+    <br>
+      <label>Light</label>
+      <input class="form-control" type="text" name="light" id="exampleTextarea" value="{{plant.light}}">
+    <br>
+      <label>Climate</label>
+      <input class="form-control" type="text" name="climate" id="exampleTextarea" value="{{plant.climate}}">
+    <br>
+      <label>Maintenance</label>
+      <input class="form-control" type="text" name="maintenance" id="exampleTextarea" value="{{plant.maintenance}}">
+    <br>
+      <button class="btn btn-primary btn-sm" type="submit">Save Plant</button>
+    </form>
+  </div>
+</div>

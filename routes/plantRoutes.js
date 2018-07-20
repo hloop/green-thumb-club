@@ -30,9 +30,11 @@ router.post('/plants/create', uploadCloud.single('photo'), (req, res, next)=>{
     light: req.body.light,
     climate: req.body.climate,
     maintenance: req.body.maintenance,
-    // image: req.file.url
    })
 
+    if(req.file){
+        newPlant.image = req.file.url;
+    }
    newPlant.save()
    .then((response)=>{
        res.redirect('/plants')
@@ -46,7 +48,7 @@ router.post('/plants/create', uploadCloud.single('photo'), (req, res, next)=>{
 router.get('/plants/:id/edit', (req, res, next)=>{
    Plant.findById(req.params.id)
    .then((thePlant)=>{
-       res.render('editPlant', {thePlant})
+       res.render('editPlant', {plant: thePlant})
    })
    .catch((err)=>{
        next(err);
@@ -55,6 +57,7 @@ router.get('/plants/:id/edit', (req, res, next)=>{
 
 
 router.post('/plants/:id/update', (req, res, next)=>{
+    console.log('id: ', req.params.id)
     Plant.findByIdAndUpdate(req.params.id, {
       species: req.body.species,
       family: req.body.family,
@@ -84,7 +87,7 @@ router.post('/plants/:id/delete', (req, res, next)=>{
 router.get('/plants/:id', (req, res, next) => {
     const id = req.params.id;
     Plant.findById(id)
-    .then((thePlant)=>{    
+    .then((thePlant)=>{   
         res.render('plantsInfo', {plant: thePlant});
     })
     .catch((err)=>{

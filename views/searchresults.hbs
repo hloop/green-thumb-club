@@ -1,0 +1,43 @@
+{{#each listOfPlants}}
+{{user}}
+<div class="enterSiteBackground">
+<section class="plantInfoSection">
+<div class="plantInfoLayout">
+<div class="card mb-3 plantInfo">
+  <h2 class="card-header">{{this.species}}</h2>
+    <div class="card-body">
+      <h5 class="card-title">Member of the <b>{{this.family}}</b> family</h5>
+    </div>
+      <img src="{{this.image}}" alt="Plant image" class="plantInfoImage">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Maintenance:</b> {{this.maintenance}}</li>
+        <li class="list-group-item"><b>Climate:</b> {{this.climate}}</li>
+        <li class="list-group-item"><b>Light:</b> {{this.light}}</li>
+      </ul>
+    <div class="card-body plantInfoButtons">
+      <a class="btn btn-info spaceBetweenButtons" href="/plants/{{this._id}}/edit" role="button">Edit Plant</a>
+      <a class="btn btn-warning spaceBetweenButtons" href="/plants/{{this._id}}/comments/new" role="button">Comment</a>
+      <a class="btn btn-danger spaceBetweenButtons" href="/plants/{{this._id}}/delete" role="button">Delete</a>
+    </div>
+    <div class="card-footer text-muted"></div>
+</div>
+</div>
+
+<div class="card mb-3 plantInfo">
+  <h2 class="card-header">Comments</h2>
+  <br>
+  <div class="commentsLayout">
+  {{#each this.comments}}
+    <h6><b>{{this.reviewer}}</b></h6>
+      <p>{{this.content}}</p>
+    <form action="/plants/{{../this._id}}/comments/delete/{{@index}}" method="post">
+      <button class="btn btn-secondary btn-sm">Delete Comment</button>
+    </form>
+    <hr>
+  {{/each}}
+  </div>
+</div>
+</section>
+</div>
+{{/each}}
+

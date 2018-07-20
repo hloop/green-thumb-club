@@ -7,15 +7,6 @@ a {
   color: #00B7FF;
 }
 
-// .navbar {
-//   position: fixed;
-// }
-
-// .credentials {
-//   display: flex;
-//   justify-content: flex-end;
-// }
-
 .header_section {
   background-image: url('../images/indoor-garden.jpg');
   background-size: cover;
@@ -92,6 +83,15 @@ a {
   width: 70%;
 }
 
+.plantInfoButtons{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.spaceBetweenButtons {
+  margin-right: 10px;
+}
+
 .plantInfo {
   width: 52vw;
 }
@@ -113,7 +113,7 @@ a {
   padding-left: 1vw;
 }
 
-// -------------------- loginPage.hbs --------------------------
+// -------------------- /views.hbs --------------------------
 
 .enterSiteBackground {
   background-color: #DBECDA;
@@ -126,8 +126,6 @@ a {
   margin-right: 65vw;
   padding-top: 10vh;
 }
-
-
 
 .form-blah {
   display: block;

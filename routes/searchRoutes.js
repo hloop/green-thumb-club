@@ -13,7 +13,7 @@ searchRouter.get('/search/plants', (req, res, next)=>{
   .then((plants)=>{
       // res.render(`/plants/${req.params.id}`)
       console.log(plants);
-      res.render('plantsInfo', {listOfPlants: plants})
+      res.render('searchresults', {listOfPlants: plants})
   })
 
     .catch((daError)=>{

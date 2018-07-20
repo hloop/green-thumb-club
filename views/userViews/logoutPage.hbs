@@ -1,0 +1,13 @@
+<div class="enterSiteBackground">
+<div class="enterSiteLayout">
+  <h1>Until next time</h1>
+    <br>
+      <form action="/logout" method="POST">
+          <button type="submit" class="btn btn-primary btn-sm">Log out</button>
+    </form>
+   <br>
+  {{#if errorMessage }}
+  <div>{{ errorMessage }}</div>
+  {{/if}}
+</div>
+</div>

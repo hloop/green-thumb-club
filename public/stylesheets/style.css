@@ -59,6 +59,13 @@ a {
 .plantInfoLayout {
   width: 70%; }
 
+.plantInfoButtons {
+  display: flex;
+  justify-content: flex-start; }
+
+.spaceBetweenButtons {
+  margin-right: 10px; }
+
 .plantInfo {
   width: 52vw; }
 
